@@ -10,10 +10,10 @@ class DashboardController extends Controller
 {
     public function index() {
         $user=Auth::user();
-        return $user->name;
+        return view("backoffice.index", compact("user"));
     }
 
     public function profile() {
-        return "sono pagina profilo backoffice";
+        return view("backoffice.profile");
     }
 }

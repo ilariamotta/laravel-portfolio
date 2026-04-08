@@ -1,1 +1,71 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+
+@import './variables';
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    background-color: $bg-soft;
+    color: $text-dark;
+}
+
+.bg-soft {
+    background-color: $bg-soft;
+}
+
+.bg-pink {
+    background-color: $pink;
+}
+
+.bg-lilac {
+    background-color: $lilac;
+}
+
+.bg-mint {
+    background-color: $mint;
+}
+
+.bg-butter {
+    background-color: $butter;
+}
+
+.bg-black-warm {
+    background-color: $black-warm;
+}
+
+.text-pink {
+    color: $pink;
+}
+
+.text-lilac {
+    color: $lilac;
+}
+
+.text-mint {
+    color: $mint;
+}
+
+.text-butter {
+    color: $butter;
+}
+
+.text-black-warm {
+    color: $black-warm;
+}
+
+.border-pink {
+    border-color: $pink !important;
+}
+
+.border-lilac {
+    border-color: $lilac !important;
+}
+
+.border-mint {
+    border-color: $mint !important;
+}
+
+.border-butter {
+    border-color: $butter !important;
+}
