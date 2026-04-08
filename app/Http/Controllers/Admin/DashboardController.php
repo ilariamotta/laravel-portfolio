@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     public function index() {
-        return "sono index amministrazione";
+        return "sono index backoffice";
+    }
+
+    public function profile() {
+        return "sono pagina profilo backoffice";
     }
 }
