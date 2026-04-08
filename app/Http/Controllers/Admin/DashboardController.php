@@ -14,6 +14,7 @@ class DashboardController extends Controller
     }
 
     public function profile() {
-        return view("backoffice.profile");
+         $user=Auth::user();
+        return view("backoffice.profile", compact("user"));
     }
 }

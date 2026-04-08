@@ -1,6 +1,6 @@
 @extends('backoffice.layouts.adminmaster')
 
-@section('contenuto')
+@section('dashboard')
     <main class=" py-4 min-vh-80">
         <h2 class="text-black-warm">Benvenuto, {{ $user->name }}!</h2>
     <div class="text-black-warm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo maxime quo repellat esse molestias? Pariatur hic accusamus, reprehenderit ullam minima voluptates magni nobis consectetur, iure est, cum aliquid minus voluptatem.</div>

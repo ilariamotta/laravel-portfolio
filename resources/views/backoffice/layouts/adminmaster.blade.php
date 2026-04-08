@@ -11,7 +11,8 @@
     @include('backoffice.partials.header')
 
     <main class="container py-4 flex-grow-1">
-        @yield('contenuto')
+        @yield('dashboard')
+        @yield('profilo')
     </main>
 
     @include('backoffice.partials.footer')
