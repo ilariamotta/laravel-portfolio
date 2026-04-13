@@ -7,5 +7,7 @@
 
 <h3 class="py-3">Visualizza il tuo profilo</h3>
 <a href="{{ route('admin.profile') }}" class="bg-lilac text-butter py-2 px-4 rounded-pill text-decoration-none">Vai al tuo profilo</a>
+<h3 class="py-3">Lista progetti</h3>
+
 </main>
 @endsection
