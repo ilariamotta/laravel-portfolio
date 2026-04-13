@@ -69,3 +69,50 @@ body {
 .border-butter {
     border-color: $butter !important;
 }
+
+.custom-table-wrapper {
+    background-color: $white;
+    border: 1px solid rgba(33, 26, 29, 0.08);
+}
+
+.custom-project-table {
+    background-color: $white;
+
+    thead th {
+        color: $white;
+        border: none;
+        padding: 1rem;
+        font-weight: 600;
+    }
+
+    td {
+        padding: 1rem;
+        vertical-align: middle;
+        border-color: rgba(33, 26, 29, 0.08);
+    }
+
+    tbody tr:hover {
+        background-color: rgba(201, 199, 255, 0.15);
+    }
+}
+
+.project-card {
+    background: linear-gradient(180deg, $white 0%, rgba(201, 199, 255, 0.12) 100%);
+    border: 1px solid rgba(232, 152, 152, 0.35);
+}
+
+.btn-project-show {
+    background-color: $lilac;
+    color: $black-warm;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-project-show:hover {
+    background-color: $pink;
+    color: $black-warm;
+}
