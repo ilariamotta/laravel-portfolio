@@ -32,4 +32,4 @@ Route::middleware(['auth', 'verified'])
         Route::get("/profile", [DashboardController::class, "profile"])->name("profile");
     });
 
-Route::resource("projects", ProjectController::class);
+
