@@ -13,7 +13,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::all();
-        return view('admin.index', compact("projects"));
+        return view('backoffice.index', compact("projects"));
     }#
 
     /**

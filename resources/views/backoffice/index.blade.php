@@ -28,10 +28,10 @@
                             <td>{{ $project->customer }}</td>
                             <td>{{ $project->time }}</td>
                             <td class="text-end">
-                                {{-- <a href="{{ route('admin.projects.show', $project) }}"
+                                <a href="{{ route('admin.show', $project) }}"
                                    class="btn btn-sm btn-project-show">
                                     Vedi
-                                </a> --}}
+                                </a>
                             </td>
                         </tr>
                     @endforeach

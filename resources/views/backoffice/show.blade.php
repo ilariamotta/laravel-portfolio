@@ -1,17 +1,38 @@
 @extends('backoffice.layouts.adminmaster')
 
 @section('dashboard')
-<main class="py-4">
-    <div class="container d-flex flex-column justify-content-center">
-        <h1 class="text-black-warm">{{ $project->name }}</h1>
+<main class="py-5">
+    <div class="container d-flex justify-content-center">
 
-        <p><strong>Cliente:</strong><br> {{ $project->customer }}</p>
-        <p><strong>Periodo:</strong> <br>{{ $project->time }}</p>
-        <p><strong>Descrizione progetto:</strong><br> {{ $project->description }}</p>
+        <div class="project-show-card p-4 p-md-5 rounded-4 shadow-sm">
 
-        <a href="{{ route('admin.index') }}" class="btn btn-project-show mt-3 inline-block">
-            Torna ai progetti
-        </a>
+            <h1 class="text-black-warm fw-bold mb-4 text-center">
+                {{ $project->name }}
+            </h1>
+
+            <div class="mb-3">
+                <span class="label">Cliente</span>
+                <p class="value">{{ $project->customer }}</p>
+            </div>
+
+            <div class="mb-3">
+                <span class="label">Periodo</span>
+                <p class="value">{{ $project->time }}</p>
+            </div>
+
+            <div class="mb-4">
+                <span class="label">Descrizione progetto</span>
+                <p class="value">{{ $project->description }}</p>
+            </div>
+
+            <div class="text-center">
+                <a href="{{ route('admin.index') }}" class="btn btn-project-show px-4 py-2">
+                    ← Torna ai progetti
+                </a>
+            </div>
+
+        </div>
+
     </div>
 </main>
 @endsection

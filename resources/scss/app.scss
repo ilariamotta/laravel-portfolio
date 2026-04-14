@@ -144,3 +144,27 @@ body {
 .text-muted-custom {
     color: $text-muted-custom;
 }
+
+.project-show-card {
+    max-width: 600px;
+    width: 100%;
+    background: linear-gradient(
+        180deg,
+        $white 0%,
+        rgba(201, 199, 255, 0.12) 100%
+    );
+    border: 1px solid rgba(232, 152, 152, 0.3);
+}
+
+.label {
+    display: block;
+    font-size: 0.85rem;
+    color: $text-muted-custom;
+    margin-bottom: 0.2rem;
+}
+
+.value {
+    font-size: 1rem;
+    color: $black-warm;
+    font-weight: 500;
+}
