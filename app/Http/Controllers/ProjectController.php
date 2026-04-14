@@ -14,7 +14,7 @@ class ProjectController extends Controller
     {
         $projects = Project::all();
         return view('admin.index', compact("projects"));
-    }
+    }#
 
     /**
      * Show the form for creating a new resource.
@@ -35,9 +35,9 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Project $project)
     {
-        //
+        return view("backoffice.show", compact("project"));
     }
 
     /**
@@ -45,7 +45,7 @@ class ProjectController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        ;
     }
 
     /**

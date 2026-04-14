@@ -116,3 +116,31 @@ body {
     background-color: $pink;
     color: $black-warm;
 }
+
+.project-show-card {
+    background: linear-gradient(180deg, $white 0%, rgba(201, 199, 255, 0.14) 100%);
+    border: 1px solid rgba(232, 152, 152, 0.35);
+}
+
+.project-info-box {
+    background-color: rgba(174, 235, 230, 0.25);
+    border: 1px solid rgba(33, 26, 29, 0.08);
+}
+
+.project-description-box {
+    background-color: rgba(255, 241, 173, 0.18);
+    border: 1px solid rgba(33, 26, 29, 0.08);
+}
+
+.project-badge {
+    background-color: $lilac;
+    color: $black-warm;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.text-muted-custom {
+    color: $text-muted-custom;
+}

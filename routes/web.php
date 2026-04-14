@@ -30,6 +30,8 @@ Route::middleware(['auth', 'verified'])
     ->group(function () {
         Route::get('/index', [DashboardController::class, 'index'])->name('index');
         Route::get("/profile", [DashboardController::class, "profile"])->name("profile");
+        
+        Route::get('/show/{project}', [ProjectController::class, 'show'])->name('show');
     });
 
 
