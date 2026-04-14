@@ -31,8 +31,6 @@ Route::middleware(['auth', 'verified'])
         Route::get('/index', [DashboardController::class, 'index'])->name('index');
         Route::get("/profile", [DashboardController::class, "profile"])->name("profile");
         
-        Route::get('/show/{project}', [ProjectController::class, 'show'])->name('show');
+        Route::resource("projects", ProjectController::class)->middleware(["auth", "verified"]);
     });
 
-
-Route::resource("projects", ProjectController::class)->middleware(["auth", "verified"]);

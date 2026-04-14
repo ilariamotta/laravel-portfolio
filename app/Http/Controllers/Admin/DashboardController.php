@@ -12,7 +12,7 @@ class DashboardController extends Controller
     public function index() {
         $user=Auth::user();
             $projects = Project::all();
-        return view("backoffice.index", compact("user", "projects"));
+        return view("backoffice.projects.index", compact("user", "projects"));
     }
 
     public function profile() {
