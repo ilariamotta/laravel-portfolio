@@ -1,7 +1,3 @@
-@import '~bootstrap/scss/bootstrap';
-
-
-
 @import './variables';
 @import '~bootstrap/scss/bootstrap';
 
@@ -54,6 +50,10 @@ body {
     color: $black-warm;
 }
 
+.text-muted-custom {
+    color: $text-muted-custom;
+}
+
 .border-pink {
     border-color: $pink !important;
 }
@@ -70,30 +70,73 @@ body {
     border-color: $butter !important;
 }
 
-.custom-table-wrapper {
+.btn-project-show {
     background-color: $lilac;
-    border: 1px solid rgba(33, 26, 29, 0.08);
+    color: $black-warm;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-project-show:hover {
+    background-color: $pink;
+    color: $black-warm;
+}
+
+.project-show-card {
+    width: 100%;
+    background: linear-gradient(
+        180deg,
+        $white 0%,
+        rgba(201, 199, 255, 0.12) 100%
+    );
+    border: 1px solid rgba(232, 152, 152, 0.3);
 }
 
 .custom-project-table {
-    background-color: $white;
+    width: 100%;
+    table-layout: auto;
+    background: transparent;
+}
 
-    thead th {
-        color: $lilac;
-        border: none;
-        padding: 1rem;
-        font-weight: 600;
-    }
+.custom-project-table thead th {
+    background-color: rgba(33, 26, 29, 0.95);
+    color: $lilac;
+    border: none;
+    padding: 1rem 1.1rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
 
-    td {
-        padding: 1rem;
-        vertical-align: middle;
-        border-color: rgba(33, 26, 29, 0.08);
-    }
+.custom-project-table thead th:first-child {
+    border-top-left-radius: 1rem;
+}
 
-    tbody tr:hover {
-        background-color: rgba(201, 199, 255, 0.15);
-    }
+.custom-project-table thead th:last-child {
+    border-top-right-radius: 1rem;
+}
+
+.custom-project-table tbody td {
+    padding: 1rem 1.1rem;
+    vertical-align: middle;
+    border-color: rgba(33, 26, 29, 0.08);
+    background-color: rgba(255, 255, 255, 0.78);
+    color: $text-dark;
+}
+
+.custom-project-table tbody tr:hover td {
+    background-color: rgba(201, 199, 255, 0.16);
+}
+
+.custom-project-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 1rem;
+}
+
+.custom-project-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 1rem;
 }
 
 .project-card {
