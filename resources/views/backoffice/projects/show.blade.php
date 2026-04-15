@@ -34,12 +34,14 @@
 </button>
 </div>
 </div>
-<div class="py-4">
-    <a href="{{ route('admin.index') }}" class="btn btn-project-index px-4 py-2 text-center ">
-        ← Torna ai progetti
-    </a>
 </div>
 </div>
+<div class="container">
+    <div class="d-flex justify-content-center mt-4">
+        <a href="{{ route('admin.projects.index') }}" class="btn btn-project-show px-4 py-2">
+            ← Torna ai progetti
+        </a>
+    </div>
 </main>
 @endsection
 

@@ -48,8 +48,12 @@
             </div>
             
                 </div>
-                                <a href="{{ route('admin.index') }}" class="btn btn-project-index px-4 py-2 mx-auto">
-                    ← Torna ai progetti
-                </a>
+                             <div class="container">
+    <div class="d-flex justify-content-center mt-4">
+        <a href="{{ route('admin.projects.index') }}" class="btn btn-project-show px-4 py-2">
+            ← Torna ai progetti
+        </a>
+    </div>
+</div>
     </main>
 @endsection
