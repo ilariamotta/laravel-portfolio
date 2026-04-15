@@ -33,6 +33,7 @@
                                 <td class="text-end">
                                     <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-sm btn-project-show">Vedi</a>
                                     <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-sm btn-project-show">Modifica</a>
+                                    <button type="button" class="btn btn-project-delete btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Elimina</button>
                                 </td>
                             </tr>
                         @endforeach
@@ -43,3 +44,28 @@
     </div>
 </main>
 @endsection
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ATTENZIONE</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Vuoi davvero eliminare il progetto <strong>{{ $project->name }}</strong>?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark rounded-pill px-4" data-bs-dismiss="modal">Annulla</button>
+        
+        {{-- elimina --}}
+        <form action="{{ route("admin.projects.destroy", $project) }}" method="POST">
+   @csrf
+   @method("DELETE")
+   <input type="submit" value="Elimina definitivamente" class="btn-project-delete btn btn-sm">
+</form>
+      </div>
+    </div>
+  </div>
+</div>

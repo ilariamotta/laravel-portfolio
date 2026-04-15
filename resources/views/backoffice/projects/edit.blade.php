@@ -48,7 +48,7 @@
             </div>
             
                 </div>
-                                <a href="{{ route('admin.index') }}" class="btn btn-project-show px-4 py-2 mx-auto">
+                                <a href="{{ route('admin.index') }}" class="btn btn-project-index px-4 py-2 mx-auto">
                     ← Torna ai progetti
                 </a>
     </main>

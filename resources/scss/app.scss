@@ -87,6 +87,26 @@ body {
 
 // BUTTONS
 
+// index
+
+.btn-project-index {
+    background-color: $lilac;
+    color: $black-warm;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-project-index:hover {
+    background-color: $black-warm;
+    color: $lilac;
+}
+
+
+
 // show
 .btn-project-show {
     background-color: $lilac;
@@ -100,8 +120,8 @@ body {
 }
 
 .btn-project-show:hover {
-    background-color: $butter;
-    color: $black-warm;
+    background-color: $black-warm;
+    color: $lilac;
 }
 
 // create
@@ -137,10 +157,27 @@ body {
 }
 
 .btn-project-store:hover {
-    background-color: $butter;
-    color: $black-warm;
+    background-color: $black-warm;
+    color: $mint;
 }
 
+// delete
+
+.btn-project-delete {
+    background-color: $pink;
+    color: $black-warm;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-project-delete:hover {
+    background-color: $black-warm;
+    color: $pink;
+}
 
 
 // TABLE
