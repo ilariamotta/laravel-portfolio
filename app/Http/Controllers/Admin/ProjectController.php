@@ -57,9 +57,9 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Project $project)
     {
-        ;
+        return view("backoffice.projects.edit", compact('project'));
     }
 
     /**

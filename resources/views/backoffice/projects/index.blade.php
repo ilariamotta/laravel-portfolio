@@ -32,6 +32,7 @@
                                 <td>{{ $project->time }}</td>
                                 <td class="text-end">
                                     <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-sm btn-project-show">Vedi</a>
+                                    <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-sm btn-project-show">Modifica</a>
                                 </td>
                             </tr>
                         @endforeach

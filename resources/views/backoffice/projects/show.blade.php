@@ -25,7 +25,7 @@
                 <p class="value">{{ $project->description }}</p>
             </div>
 
-
+ <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-sm btn-project-show">Modifica</a>
         </div>
 
     </div>
