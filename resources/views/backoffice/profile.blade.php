@@ -1,22 +1,36 @@
 @extends('backoffice.layouts.adminmaster')
 
-@section('profilo')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <h2 class="text-black-warm bg-lilac py-2 px-4 rounded-pill text-white">Il mio Profilo</h2>
-                <div class="card mb-4">
-                    <div class="card-body rounded-5">
-                        <h5 class="card-title text-black-warm">Nome: </h5>
-                        <p class="card-text text-black-warm">{{ $user->name }}</p>
-                        <h5 class="card-text text-black-warm">Email: </h5>
-                        <p class="card-text text-black-warm">{{ $user->email }}</p>
-                        <h5 class="card-text text-black-warm">Data di registrazione: </h5>
-                        <p>{{ $user->created_at->format('d/m/Y') }}</p>
-                    </div>
+@section('dashboard')
+    <main class="py-5">
+        <div class="container d-flex justify-content-center">
+            <div class="project-show-card p-4 p-md-5 rounded-4 shadow-sm">
+
+                <h1 class="text-black-warm fw-bold mb-4 text-center">
+                    Il mio profilo
+                </h1>
+
+                <div class="mb-4">
+                    <span class="label">Nome</span>
+                    <p class="value mb-0">{{ $user->name }}</p>
                 </div>
-                <a href="{{ route('admin.index') }}">Torna alla home amministrativa</a>
+
+                <div class="mb-4">
+                    <span class="label">Email</span>
+                    <p class="value mb-0">{{ $user->email }}</p>
+                </div>
+
+                <div class="mb-4">
+                    <span class="label">Data di registrazione</span>
+                    <p class="value mb-0">{{ $user->created_at->format('d/m/Y') }}</p>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="{{ route('admin.index') }}" class="btn btn-project-show px-4 py-2">
+                        ← Torna alla home amministrativa
+                    </a>
+                </div>
+
             </div>
         </div>
-    </div>
+    </main>
 @endsection

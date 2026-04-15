@@ -25,14 +25,14 @@
                 <p class="value">{{ $project->description }}</p>
             </div>
 
-            <div class="text-center">
-                <a href="{{ route('admin.index') }}" class="btn btn-project-show px-4 py-2">
-                    ← Torna ai progetti
-                </a>
-            </div>
 
         </div>
 
     </div>
+    <div class="text-center py-4">
+                <a href="{{ route('admin.index') }}" class="btn btn-project-show px-4 py-2">
+                    ← Torna ai progetti
+                </a>
+            </div>
 </main>
 @endsection

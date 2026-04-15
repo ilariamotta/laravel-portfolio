@@ -1,10 +1,18 @@
+// IMPORT
+
 @import './variables';
 @import '~bootstrap/scss/bootstrap';
+
+
+// BASE PROGETTO
 
 body {
     background-color: $bg-soft;
     color: $text-dark;
 }
+
+
+// BACKGROUND COLORS
 
 .bg-soft {
     background-color: $bg-soft;
@@ -30,6 +38,9 @@ body {
     background-color: $black-warm;
 }
 
+
+// TEXT COLORS
+
 .text-pink {
     color: $pink;
 }
@@ -54,6 +65,9 @@ body {
     color: $text-muted-custom;
 }
 
+
+// BORDER COLORS
+
 .border-pink {
     border-color: $pink !important;
 }
@@ -70,6 +84,9 @@ body {
     border-color: $butter !important;
 }
 
+
+// BUTTONS
+
 .btn-project-show {
     background-color: $lilac;
     color: $black-warm;
@@ -82,19 +99,12 @@ body {
 }
 
 .btn-project-show:hover {
-    background-color: $pink;
+    background-color: $butter;
     color: $black-warm;
 }
 
-.project-show-card {
-    width: 100%;
-    background: linear-gradient(
-        180deg,
-        $white 0%,
-        rgba(201, 199, 255, 0.12) 100%
-    );
-    border: 1px solid rgba(232, 152, 152, 0.3);
-}
+
+// TABLE
 
 .custom-project-table {
     width: 100%;
@@ -102,6 +112,7 @@ body {
     background: transparent;
 }
 
+/* header */
 .custom-project-table thead th {
     background-color: rgba(33, 26, 29, 0.95);
     color: $lilac;
@@ -111,6 +122,7 @@ body {
     white-space: nowrap;
 }
 
+/* angoli arrotondati */
 .custom-project-table thead th:first-child {
     border-top-left-radius: 1rem;
 }
@@ -119,6 +131,7 @@ body {
     border-top-right-radius: 1rem;
 }
 
+/* body */
 .custom-project-table tbody td {
     padding: 1rem 1.1rem;
     vertical-align: middle;
@@ -127,10 +140,12 @@ body {
     color: $text-dark;
 }
 
+/* hover righe */
 .custom-project-table tbody tr:hover td {
     background-color: rgba(201, 199, 255, 0.16);
 }
 
+/* angoli arrotondati sotto */
 .custom-project-table tbody tr:last-child td:first-child {
     border-bottom-left-radius: 1rem;
 }
@@ -139,31 +154,35 @@ body {
     border-bottom-right-radius: 1rem;
 }
 
+
+// CARD GENERICHE
+
 .project-card {
-    background: linear-gradient(180deg, $white 0%, rgba(201, 199, 255, 0.12) 100%);
+    background: linear-gradient(
+        180deg,
+        $white 0%,
+        rgba(201, 199, 255, 0.12) 100%
+    );
     border: 1px solid rgba(232, 152, 152, 0.35);
 }
 
-.btn-project-show {
-    background-color: $lilac;
-    color: $black-warm;
-    border: 1px solid transparent;
-    border-radius: 999px;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    transition: 0.2s ease-in-out;
-}
 
-.btn-project-show:hover {
-    background-color: $pink;
-    color: $black-warm;
-}
+// CARD SHOW
 
+// gradient
 .project-show-card {
-    background: linear-gradient(180deg, $white 0%, rgba(201, 199, 255, 0.14) 100%);
-    border: 1px solid rgba(232, 152, 152, 0.35);
+    max-width: 600px;
+    width: 100%;
+    background: linear-gradient(
+        180deg,
+        $white 0%,
+        rgba(201, 199, 255, 0.12) 100%
+    );
+    border: 1px solid rgba(232, 152, 152, 0.3);
 }
+
+
+// SHOW INFO BOX
 
 .project-info-box {
     background-color: rgba(174, 235, 230, 0.25);
@@ -175,6 +194,9 @@ body {
     border: 1px solid rgba(33, 26, 29, 0.08);
 }
 
+
+// BADGE
+
 .project-badge {
     background-color: $lilac;
     color: $black-warm;
@@ -184,20 +206,8 @@ body {
     font-weight: 600;
 }
 
-.text-muted-custom {
-    color: $text-muted-custom;
-}
 
-.project-show-card {
-    max-width: 600px;
-    width: 100%;
-    background: linear-gradient(
-        180deg,
-        $white 0%,
-        rgba(201, 199, 255, 0.12) 100%
-    );
-    border: 1px solid rgba(232, 152, 152, 0.3);
-}
+// LABEL E VALUE
 
 .label {
     display: block;
