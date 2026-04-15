@@ -22,6 +22,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
+
         return view("backoffice.projects.create");
     }
 
@@ -30,7 +31,19 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newProject = new Project();
+
+        $newProject->name= $data["name"];
+        $newProject->customer = $data["customer"];
+        $newProject->time = $data["time"];
+        $newProject->description = $data["description"];
+
+        $newProject->save();
+
+        return redirect()->route("admin.projects.show", $newProject);
+
     }
 
     /**

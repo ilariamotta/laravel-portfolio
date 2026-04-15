@@ -123,6 +123,26 @@ body {
 }
 
 
+// store
+
+.btn-project-store {
+    background-color: $mint;
+    color: $black-warm;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-project-store:hover {
+    background-color: $butter;
+    color: $black-warm;
+}
+
+
+
 // TABLE
 
 .custom-project-table {
@@ -182,7 +202,7 @@ body {
         $white 0%,
         rgba(201, 199, 255, 0.12) 100%
     );
-    border: 1px solid rgba(232, 152, 152, 0.35);
+    border: 1px solid rgba(83, 83, 83, 0.35);
 }
 
 
@@ -197,7 +217,7 @@ body {
         $white 0%,
         rgba(201, 199, 255, 0.12) 100%
     );
-    border: 1px solid rgba(232, 152, 152, 0.3);
+    border: 1px solid rgba(143, 143, 143, 0.3);
 }
 
 

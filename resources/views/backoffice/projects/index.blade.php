@@ -3,7 +3,7 @@
 @section('dashboard')
 <main class="py-4 min-vh-80">
     <div class="container">
-        <h2 class="text-black-warm mb-3">Benvenuto, {{ $user->name }}!</h2>
+        <h2 class="text-black-warm mb-3">Benvenuto,  {{ auth()->user()->name }}!</h2>
 
         <div class="text-black-warm mb-4">
             Da questa sezione puoi gestire i progetti del tuo portfolio: visualizzare i dettagli, modificare le informazioni o eliminarli. Clicca su "Vedi" per accedere alla pagina di gestione di ciascun progetto oppure clicca sul pulsante "Aggiungi nuovo progetto".

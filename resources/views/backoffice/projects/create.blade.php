@@ -1,22 +1,50 @@
 @extends('backoffice.layouts.adminmaster')
 
 @section('dashboard')
+    <main class="py-5">
+        <div class="container d-flex justify-content-center">
+            <div class="project-show-card p-4 p-md-5 rounded-4 shadow-sm">
 
-<form action="{{ route("admin.projects.store") }}" method="POST">
-@csrf
-<label for="name">Titolo progetto</label>
-<input type="text" name="name" id="name">
-<label for="customer">Nome cliente</label>
-<input type="text" name="customer" id="customer">
-	<div class="form-group">
-    <label class="active" for="time">Periodo progetto</label>
-    <input class="form-control" type="date" id="time" name="time">
-</div>
-<label for="description">Descrizione del progetto</label>
-<input type="textarea" name="description" id="description"></input>
-<input type="submit" value="Salva il progetto">
-</form>
+                <h1 class="text-black-warm fw-bold mb-4 text-center">
+                    Crea un nuovo progetto
+                </h1>
 
+                <form action="{{ route('admin.projects.store') }}" method="POST">
+                    @csrf
 
-</form>
+                    <div class="mb-4">
+                        <label for="name" class="label">Titolo progetto</label>
+                        <input type="text" name="name" id="name" class="form-control"
+                            placeholder="Inserisci il titolo del progetto">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="customer" class="label">Nome cliente</label>
+                        <input type="text" name="customer" id="customer" class="form-control"
+                            placeholder="Inserisci il nome del cliente">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="time" class="label">Periodo progetto</label>
+                        <input type="date" name="time" id="time" class="form-control">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="description" class="label">Descrizione del progetto</label>
+                        <textarea name="description" id="description" rows="5" class="form-control"
+                            placeholder="Scrivi una breve descrizione del progetto"></textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <a href="{{ route('admin.projects.index') }}" class="btn btn-outline-dark rounded-pill px-4">
+                            Annulla
+                        </a>
+
+                        <input type="submit" value="Salva il progetto" class="btn btn-project-store px-4 py-2">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </main>
 @endsection
