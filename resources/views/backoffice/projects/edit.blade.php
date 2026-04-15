@@ -9,8 +9,9 @@
                     Modifica il progetto
                 </h1>
 
-                <form action="{{ route('admin.projects.store') }}" method="POST">
+                <form action="{{ route('admin.projects.update', $project) }}" method="POST">
                     @csrf
+                    @method('PUT')
 
                     <div class="mb-4">
                         <label for="name" class="label">Titolo progetto</label>
