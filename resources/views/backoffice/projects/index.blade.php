@@ -6,10 +6,10 @@
         <h2 class="text-black-warm mb-3">Benvenuto, {{ $user->name }}!</h2>
 
         <div class="text-black-warm mb-4">
-            Da questa sezione puoi gestire i progetti del tuo portfolio: visualizzare i dettagli, modificare le informazioni o eliminarli. Clicca su "Vedi" per accedere alla pagina di gestione di ciascun progetto oppure clicca sul pulsante "Crea nuovo progetto".
+            Da questa sezione puoi gestire i progetti del tuo portfolio: visualizzare i dettagli, modificare le informazioni o eliminarli. Clicca su "Vedi" per accedere alla pagina di gestione di ciascun progetto oppure clicca sul pulsante "Aggiungi nuovo progetto".
         </div>
 
-
+  <a href="{{ route('admin.projects.create') }}" class="btn btn-sm btn-project-create my-2">Aggiungi nuovo progetto</a>
         <div class="p-3 p-md-4 rounded-4 shadow-sm">
             <div class="table-responsive centered-table">
                 <table class="table align-middle mb-0 custom-project-table">
@@ -31,10 +31,7 @@
                                 <td>{{ $project->customer }}</td>
                                 <td>{{ $project->time }}</td>
                                 <td class="text-end">
-                                    <a href="{{ route('admin.projects.show', $project) }}"
-                                       class="btn btn-sm btn-project-show">
-                                        Vedi
-                                    </a>
+                                    <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-sm btn-project-show">Vedi</a>
                                 </td>
                             </tr>
                         @endforeach

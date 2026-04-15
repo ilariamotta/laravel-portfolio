@@ -87,6 +87,7 @@ body {
 
 // BUTTONS
 
+// show
 .btn-project-show {
     background-color: $lilac;
     color: $black-warm;
@@ -100,6 +101,24 @@ body {
 
 .btn-project-show:hover {
     background-color: $butter;
+    color: $black-warm;
+}
+
+// create
+
+.btn-project-create {
+    background-color: $lilac;
+    color: $black-warm;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-project-create:hover {
+    background-color: $mint;
     color: $black-warm;
 }
 
