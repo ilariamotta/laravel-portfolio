@@ -30,6 +30,16 @@
                     </div>
 
                     <div class="mb-4">
+                        <label for="type_id" class="label">Categoria</label>
+                        <select name="type_id" id="type_id">
+                            @foreach ($types as $type)
+                            <option value="{{ $type->id}}">{{ $type->name }}</option>
+                            @endforeach
+                        </select>
+                        
+                    </div>
+
+                    <div class="mb-4">
                         <label for="description" class="label">Descrizione del progetto</label>
                         <textarea name="description" id="description" rows="5" class="form-control"
                             placeholder="Scrivi una breve descrizione del progetto"></textarea>
