@@ -188,8 +188,16 @@ body {
     background: transparent;
 }
 
+.custom-type-table {
+    width: 60%;
+    table-layout: auto;
+    background: transparent;
+}
+
+
 /* header */
-.custom-project-table thead th {
+.custom-project-table thead th,
+.custom-type-table thead th {
     background-color: rgba(33, 26, 29, 0.95);
     color: $lilac;
     border: none;
@@ -199,16 +207,19 @@ body {
 }
 
 /* angoli arrotondati */
-.custom-project-table thead th:first-child {
+.custom-project-table thead th:first-child,
+.custom-type-table thead th:first-child {
     border-top-left-radius: 1rem;
 }
 
-.custom-project-table thead th:last-child {
+.custom-project-table thead th:last-child,
+.custom-type-table thead th:last-child {
     border-top-right-radius: 1rem;
 }
 
 /* body */
-.custom-project-table tbody td {
+.custom-project-table tbody td,
+.custom-type-table tbody td {
     padding: 1rem 1.1rem;
     vertical-align: middle;
     border-color: rgba(33, 26, 29, 0.08);
@@ -217,19 +228,21 @@ body {
 }
 
 /* hover righe */
-.custom-project-table tbody tr:hover td {
+.custom-project-table tbody tr:hover td,
+.custom-type-table tbody tr:hover td {
     background-color: rgba(201, 199, 255, 0.16);
 }
 
 /* angoli arrotondati sotto */
-.custom-project-table tbody tr:last-child td:first-child {
+.custom-project-table tbody tr:last-child td:first-child,
+.custom-type-table tbody tr:last-child td:first-child {
     border-bottom-left-radius: 1rem;
 }
 
-.custom-project-table tbody tr:last-child td:last-child {
+.custom-project-table tbody tr:last-child td:last-child,
+.custom-type-table tbody tr:last-child td:last-child {
     border-bottom-right-radius: 1rem;
 }
-
 
 // CARD GENERICHE
 

@@ -21,7 +21,7 @@ class TypeController extends Controller
      */
     public function create()
     {
-        //
+        return view("backoffice.types.create");
     }
 
     /**
@@ -29,7 +29,11 @@ class TypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $newType = new Type();
+        $newType->name = $data["name"];
+        $newType->save();
+        return redirect()->route("admin.types.index", $newType);
     }
 
     /**

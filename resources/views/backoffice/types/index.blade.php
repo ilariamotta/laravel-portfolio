@@ -2,9 +2,12 @@
 
 @section('dashboard')
 <main class="py-4 min-vh-80">
-    <div class="p-3 p-md-4 rounded-4 shadow-sm">
+    <div class="d-flex justify-content-center align-items-center">
+    <a href="{{ route('admin.types.create') }}" class="btn btn-sm btn-project-create my-2">Aggiungi nuova categoria progetto</a>
+    </div>
+    <div class="d-flex justify-content-center">
             <div class="table-responsive centered-table">
-                <table class="table align-middle mb-0 custom-project-table">
+                <table class="table align-middle mb-0 custom-type-table">
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -17,7 +20,7 @@
                             <tr>
                                 <td>{{ $type->name }}</td>
                                 <td class="text-end">
-                                    {{-- <a href="{{ route('admin.types.show', $type) }}" class="btn btn-sm btn-project-show">Vedi</a>
+                                    {{-- 
                                     <a href="{{ route('admin.types.edit', $type) }}" class="btn btn-sm btn-project-show">Modifica</a>
                                     <button type="button" class="btn btn-project-delete btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Elimina</button> --}}
                                 </td>
