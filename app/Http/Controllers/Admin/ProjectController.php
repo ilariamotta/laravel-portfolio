@@ -15,7 +15,8 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::all();
-        return view('backoffice.projects.index', compact("projects"));
+        $types = Type::all();
+        return view('backoffice.projects.index', compact("projects", "types"));
     }#
 
     /**

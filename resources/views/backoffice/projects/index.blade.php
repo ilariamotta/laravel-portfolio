@@ -19,6 +19,7 @@
                             <th>Nome</th>
                             <th>Cliente</th>
                             <th>Periodo</th>
+                            <th>Categoria</th>
                             <th class="text-end">Azioni</th>
                         </tr>
                     </thead>
@@ -30,6 +31,7 @@
                                 <td class="fw-bold text-pink">{{ $project->name }}</td>
                                 <td>{{ $project->customer }}</td>
                                 <td>{{ $project->time }}</td>
+                                <td>{{ $project->type->name }}</td>
                                 <td class="text-end">
                                     <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-sm btn-project-show">Vedi</a>
                                     <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-sm btn-project-show">Modifica</a>
