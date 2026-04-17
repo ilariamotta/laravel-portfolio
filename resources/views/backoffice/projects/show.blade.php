@@ -19,6 +19,10 @@
                 <span class="label">Periodo</span>
                 <p class="value">{{ $project->time }}</p>
             </div>
+            <div class="mb-4">
+                <span class="label">Categoria</span>
+                <p class="value">{{ $project->type->name }}</p>
+            </div>
 
             <div class="mb-4">
                 <span class="label">Descrizione progetto</span>
