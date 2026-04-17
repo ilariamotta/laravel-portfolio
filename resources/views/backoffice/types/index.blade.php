@@ -18,11 +18,11 @@
                     <tbody>
                         @foreach ($types as $type)
                             <tr>
-                                <td>{{ $type->name }}</td>
+                                <td class="me-5 pe-5">{{ $type->name }}</td>
                                 <td class="text-end">
-                                    {{-- 
+                                    
                                     <a href="{{ route('admin.types.edit', $type) }}" class="btn btn-sm btn-project-show">Modifica</a>
-                                    <button type="button" class="btn btn-project-delete btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Elimina</button> --}}
+                                    <button type="button" class="btn btn-project-delete btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Elimina</button>
                                 </td>
                             </tr>
                         @endforeach
