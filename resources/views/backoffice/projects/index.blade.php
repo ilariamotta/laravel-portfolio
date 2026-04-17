@@ -7,6 +7,8 @@
 
         <div class="text-black-warm mb-4">
             Da questa sezione puoi gestire i progetti del tuo portfolio: visualizzare i dettagli, modificare le informazioni o eliminarli. Clicca su "Vedi" per accedere alla pagina di gestione di ciascun progetto oppure clicca sul pulsante "Aggiungi nuovo progetto".
+            <br> Altrimenti gestisci le categorie dei progetti
+            <a href="{{ route("admin.types.index") }}" class="text-pink">qui</a>.
         </div>
 
   <a href="{{ route('admin.projects.create') }}" class="btn btn-sm btn-project-create my-2">Aggiungi nuovo progetto</a>
