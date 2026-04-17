@@ -61,7 +61,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view("backoffice.projects.edit", compact('project'));
+        $types = Type::all();
+        return view("backoffice.projects.edit", compact('project', "types"));
     }
 
     /**
@@ -72,6 +73,7 @@ class ProjectController extends Controller
         $data = $request->all();
         $project->name= $data["name"];
         $project->customer = $data["customer"];
+        $project->type_id = $data["type_id"];
         $project->time = $data["time"];
         $project->description = $data["description"];
 
