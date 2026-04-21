@@ -331,3 +331,16 @@ body {
     line-height: 1;
     border: 1px solid rgba(33, 26, 29, 0.08);
 }
+
+// PUNTO COLORE
+
+.tech-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+
+    /* piccolo bordo per visibilità su colori chiari */
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}

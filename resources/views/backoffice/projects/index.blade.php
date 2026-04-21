@@ -11,7 +11,7 @@
             <br>
             Altrimenti gestisci le categorie dei progetti
             <a href="{{ route('admin.types.index') }}" class="text-pink">qui</a>.<br>
-            Puoi anche modificare o aggiungere le tecnologie che utilizzi nei progetti da qui.
+            Puoi anche modificare o aggiungere le tecnologie che utilizzi nei progetti da <a href="{{ route('admin.technologies.index') }}" class="text-mint">qui</a>.
                 </div>
 
         <a href="{{ route('admin.projects.create') }}" class="btn btn-sm btn-project-create my-2">

@@ -21,7 +21,16 @@
                 <tbody>
                     @foreach ($technologies as $technology)
                         <tr>
-                            <td class="me-5 pe-5">{{ $technology->name }}</td>
+                            <td class="me-5 pe-5">
+                                <span class="d-inline-flex align-items-center gap-2">
+                                    <span 
+                                        class="tech-dot"
+                                        style="background-color: {{ $technology->color }}"
+                                    ></span>
+
+                                    {{ $technology->name }}
+                                </span>
+                            </td>
                             <td class="text-end">
                                 <a href="{{ route('admin.technologies.edit', $technology) }}" class="btn btn-sm btn-project-show">
                                     Modifica
