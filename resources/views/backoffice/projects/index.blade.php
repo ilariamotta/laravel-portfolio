@@ -2,7 +2,7 @@
 
 @section('dashboard')
 <main class="py-4 min-vh-80">
-    <div class="container">
+    <div class="container-xl">
         <h2 class="text-black-warm mb-3">Benvenuto, {{ auth()->user()->name }}!</h2>
 
         <div class="text-black-warm mb-4">
@@ -40,6 +40,7 @@
                                 <td>{{ $project->time }}</td>
                                 <td>{{ $project->type?->name }}</td>
                                 <td class="text-end">
+                                       <div class="d-flex justify-content-end gap-2 flex-wrap">
                                     <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-sm btn-project-show">Vedi</a>
                                     <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-sm btn-project-show">Modifica</a>
 
@@ -51,6 +52,7 @@
                                     >
                                         Elimina
                                     </button>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach

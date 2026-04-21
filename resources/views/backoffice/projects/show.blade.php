@@ -24,6 +24,16 @@
                 <p class="value">{{ $project->type->name }}</p>
             </div>
 
+             <div class="mb-4">
+                <span class="label">Tecnologie</span>
+                @if (count($projects->technologies) > 0)
+                     @foreach ($projects->technologies as $technology)
+                    <span class="technology-badge">{{ $technology->name }}</span>
+                @endforeach
+                @endif
+               
+            </div>
+
             <div class="mb-4">
                 <span class="label">Descrizione progetto</span>
                 <p class="value">{{ $project->description }}</p>
