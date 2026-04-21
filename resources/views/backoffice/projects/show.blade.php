@@ -24,15 +24,14 @@
                 <p class="value">{{ $project->type->name }}</p>
             </div>
 
+            @if (count($project->technologies) > 0)
              <div class="mb-4">
                 <span class="label pb-1">Tecnologie</span>
-                @if (count($project->technologies) > 0)
                      @foreach ($project->technologies as $technology)
                     <span class="technology-badge" style="background-color: {{ $technology->color }}">{{ $technology->name }}</span>
                 @endforeach
-                @endif
-               
             </div>
+            @endif
 
             <div class="mb-4">
                 <span class="label">Descrizione progetto</span>

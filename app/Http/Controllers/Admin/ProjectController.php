@@ -46,8 +46,10 @@ class ProjectController extends Controller
         $newProject->description = $data["description"];
 
         $newProject->save();
-
+        if ($request->has("technologies")) {
         $newProject->technologies()->attach($data["technologies"]);
+        } 
+
 
         return redirect()->route("admin.projects.show", $newProject);
 
@@ -85,7 +87,12 @@ class ProjectController extends Controller
 
         $project->update();
 
+        if ($request->has('technologies')) {
         $project->technologies()->sync($data["technologies"]);  
+        } else {
+            $project->technologies()->detach();
+        }
+        
         
         return redirect()->route("admin.projects.show", $project);
 

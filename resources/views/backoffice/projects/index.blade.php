@@ -10,8 +10,9 @@
             Clicca su "Vedi" per accedere alla pagina di gestione di ciascun progetto oppure clicca sul pulsante "Aggiungi nuovo progetto".
             <br>
             Altrimenti gestisci le categorie dei progetti
-            <a href="{{ route('admin.types.index') }}" class="text-pink">qui</a>.
-        </div>
+            <a href="{{ route('admin.types.index') }}" class="text-pink">qui</a>.<br>
+            Puoi anche modificare o aggiungere le tecnologie che utilizzi nei progetti da qui.
+                </div>
 
         <a href="{{ route('admin.projects.create') }}" class="btn btn-sm btn-project-create my-2">
             Aggiungi nuovo progetto
