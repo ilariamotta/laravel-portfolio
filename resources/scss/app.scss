@@ -323,12 +323,12 @@ body {
 .technology-badge {
     display: inline-flex;
     align-items: center;
-    padding: 0.45rem 0.9rem;
+    padding: 0.15rem 0.45rem;
     border-radius: 999px;
-    background-color: rgba(201, 199, 255, 0.35);
+    background-color: rgba(201, 199, 255, 0.28);
     color: $black-warm;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     font-weight: 600;
+    line-height: 1;
     border: 1px solid rgba(33, 26, 29, 0.08);
-    box-shadow: 0 2px 8px rgba(33, 26, 29, 0.06);
 }
