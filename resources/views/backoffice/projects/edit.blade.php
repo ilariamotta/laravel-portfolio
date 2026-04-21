@@ -51,7 +51,7 @@
                     id="technology-{{ $technology->id }}"
                     {{ $project->technologies->contains($technology->id) ? 'checked' : '' }}
                 >
-                <label for="technology-{{ $technology->id }}" class="pe-2">
+                <label for="technology-{{ $technology->id }}" class="pe-2" >
                     {{ $technology->name }}
                 </label>
             @endforeach
