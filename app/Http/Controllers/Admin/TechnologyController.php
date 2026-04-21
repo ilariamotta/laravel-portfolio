@@ -13,7 +13,7 @@ class TechnologyController extends Controller
      */
     public function index()
     {
-        $tecnologies = Technology::all();
+        $technologies = Technology::all();
         return view("backoffice.technologies.index", compact("technologies"));
     }
 
@@ -59,7 +59,7 @@ class TechnologyController extends Controller
      */
     public function update(Request $request, Technology $technology)
     {
-        $data = request->all();
+        $data = $request->all();
         $technology->name = $data["name"];
         $technology->color = $data["color"];
         $technology->update();
@@ -69,7 +69,7 @@ class TechnologyController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Technology $technology)
     {
         $technology->delete();
         return redirect()->route("admin.technologies.index");

@@ -3,8 +3,8 @@
 @section('dashboard')
 <main class="py-4 min-vh-80">
     <div class="d-flex justify-content-center align-items-center">
-        <a href="{{ route('admin.types.create') }}" class="btn btn-sm btn-project-create mb-4">
-            Aggiungi nuova categoria progetto
+        <a href="{{ route('admin.technologies.create') }}" class="btn btn-sm btn-project-create mb-4">
+            Aggiungi nuova tecnologia
         </a>
     </div>
 
@@ -19,11 +19,11 @@
                 </thead>
 
                 <tbody>
-                    @foreach ($types as $type)
+                    @foreach ($technologies as $technology)
                         <tr>
-                            <td class="me-5 pe-5">{{ $type->name }}</td>
+                            <td class="me-5 pe-5">{{ $technology->name }}</td>
                             <td class="text-end">
-                                <a href="{{ route('admin.types.edit', $type) }}" class="btn btn-sm btn-project-show">
+                                <a href="{{ route('admin.technologies.edit', $technology) }}" class="btn btn-sm btn-project-show">
                                     Modifica
                                 </a>
 
@@ -31,7 +31,7 @@
                                     type="button"
                                     class="btn btn-project-delete btn-sm"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal{{ $type->id }}">
+                                    data-bs-target="#exampleModal{{ $technology->id }}">
                                     Elimina
                                 </button>
                             </td>
@@ -49,17 +49,17 @@
     </div>
 </main>
 
-@foreach ($types as $type)
-    <div class="modal fade" id="exampleModal{{ $type->id }}" tabindex="-1" aria-labelledby="exampleModalLabel{{ $type->id }}" aria-hidden="true">
+@foreach ($technologies as $technology)
+    <div class="modal fade" id="exampleModal{{ $technology->id }}" tabindex="-1" aria-labelledby="exampleModalLabel{{ $technology->id }}" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel{{ $type->id }}">ATTENZIONE</h5>
+                    <h5 class="modal-title" id="exampleModalLabel{{ $technology->id }}">ATTENZIONE</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <div class="modal-body">
-                    Vuoi davvero eliminare la categoria <strong>{{ $type->name }}</strong>?
+                    Vuoi davvero eliminare la tecnologia <strong>{{ $technology->name }}</strong>?
                 </div>
 
                 <div class="modal-footer">
@@ -67,7 +67,7 @@
                         Annulla
                     </button>
 
-                    <form action="{{ route('admin.types.destroy', $type) }}" method="POST">
+                    <form action="{{ route('admin.technologies.destroy', $technology) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value="Elimina definitivamente" class="btn-project-delete btn btn-sm">
