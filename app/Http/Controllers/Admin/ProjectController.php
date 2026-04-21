@@ -67,7 +67,8 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         $types = Type::all();
-        return view("backoffice.projects.edit", compact('project', "types"));
+        $technologies = Technology::all();
+        return view("backoffice.projects.edit", compact('project', "types", "technologies"));
     }
 
     /**
@@ -83,6 +84,9 @@ class ProjectController extends Controller
         $project->description = $data["description"];
 
         $project->update();
+
+        $project->technologies()->sync($data["technologies"]);  
+        
         return redirect()->route("admin.projects.show", $project);
 
     }

@@ -39,6 +39,7 @@
                     </div>
 
                     <div class="mb-4">
+                        <label for="type_id" class="label">Tecnologie utilizzate</label>
                         @foreach ($technologies as $technology)
                             <input type="checkbox" name="technologies[]" value="{{ $technology->id }}" id="technology-{{ $technology->id }}">
                             <label for="technology-{{ $technology->id }}" class="pe-2">{{ $technology->name }}</label>

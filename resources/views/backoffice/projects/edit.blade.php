@@ -41,6 +41,22 @@
                         </select>
                     </div>
 
+                                      <div class="mb-4">
+    <label class="label d-block mb-2">Tecnologie utilizzate</label>
+ @foreach ($technologies as $technology)
+                <input
+                    type="checkbox"
+                    name="technologies[]"
+                    value="{{ $technology->id }}"
+                    id="technology-{{ $technology->id }}"
+                    {{ $project->technologies->contains($technology->id) ? 'checked' : '' }}
+                >
+                <label for="technology-{{ $technology->id }}" class="pe-2">
+                    {{ $technology->name }}
+                </label>
+            @endforeach
+        </div>
+
                     <div class="mb-4">
                         <label for="description" class="label">Descrizione del progetto</label>
                         <textarea name="description" id="description" rows="5" class="form-control"
