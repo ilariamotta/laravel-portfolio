@@ -9,7 +9,7 @@
                     Crea un nuovo progetto
                 </h1>
 
-                <form action="{{ route('admin.projects.store') }}" method="POST">
+                <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="mb-4">
@@ -44,6 +44,11 @@
                             <input type="checkbox" name="technologies[]" value="{{ $technology->id }}" id="technology-{{ $technology->id }}">
                             <label for="technology-{{ $technology->id }}" class="pe-2">{{ $technology->name }}</label>
                         @endforeach
+                    </div>
+
+                      <div class="mb-4">
+                        <label for="image" class="label">Immagine del progetto</label>
+                        <input type="file" id="image" name="image" class="form-control">
                     </div>
 
                     <div class="mb-4">
