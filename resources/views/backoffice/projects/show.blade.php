@@ -38,6 +38,15 @@
                 <p class="value">{{ $project->description }}</p>
             </div>
 
+            <div class="mb-4 d-flex flex-column justify-content-center align-items-center">
+                <span class="label">Immagine progetto</span>
+                @if ($project->image)
+                <img alt="{{ $project->name }}" src="{{ asset("storage/" . $project->image ) }}" class="img-fluid rounded-4 shadow-sm">
+                @else 
+                <p class="text-muted">Nessuna immagine disponibile</p>
+                @endif
+            </div>
+
             <div class="d-flex justify-content-center align-items-center gap-2">
 {{-- modifica --}}
  <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-sm btn-project-show">Modifica</a>
