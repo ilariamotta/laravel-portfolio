@@ -9,7 +9,7 @@
                     Modifica il progetto
                 </h1>
 
-                <form action="{{ route('admin.projects.update', $project) }}" method="POST">
+                <form action="{{ route('admin.projects.update', $project) }}" method="POST"  enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
@@ -56,6 +56,17 @@
                 </label>
             @endforeach
         </div>
+
+<div class="mb-4">
+    <label for="image" class="label">Immagine del progetto</label>
+    <input type="file" id="image" name="image" class="form-control">
+
+    @if ($project->image)
+        <div id="post-image" class="mt-3 d-flex justify-content-center align-items-center flex-column">
+            <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->name }}" class="img-fluid img-thumbnail w-25 rounded-4 shadow-sm">
+        </div>
+    @endif
+</div>
 
                     <div class="mb-4">
                         <label for="description" class="label">Descrizione del progetto</label>
